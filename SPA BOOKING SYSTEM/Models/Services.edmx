@@ -1,0 +1,507 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="venueModel1.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Table_Facial">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="FACIAL NAME" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="DESCRIPTION" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="COST" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="ITEM" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="Table_Facial_Men">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="FACIAL NAME" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="DESCRIPTION" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="COST" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="ITEM" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Table_Gender">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="GENDER" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Table_Haircut_Female">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="HAIR CUT NAME" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="COST" Type="float" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Table_Haircut_Men">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="HAIR CUT NAME" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="COST" Type="float" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Table_Manicure_Female">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="TYPES" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="COST" Type="int" Nullable="false" />
+          <Property Name="ITEM" Type="nvarchar(max)" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Table_Manicure_Male">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="TYPE" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="COST" Type="float" Nullable="false" />
+          <Property Name="ITEM" Type="nvarchar(max)" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Table_Massage">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="TYPE" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="COST" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="ITEM" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Table_Pedi_Men">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="TYPE" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="COST" Type="float" Nullable="false" />
+          <Property Name="ITEM" Type="nvarchar(max)" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Table_Pedicure">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="TYPE" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="COST" Type="float" Nullable="false" />
+          <Property Name="ITEM" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Table_Threading">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="AREA" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="COST" Type="float" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Table_Threading_Male">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="AREA" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="COST" Type="float" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Table_Type_Of_Service">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="TYPE OF SERVICE" Type="nvarchar(max)" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Table_Venue">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="LOCATION" Type="nvarchar(max)" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Table_Wax">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="WAXING TYPE" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="WAXING AREA" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="COST" Type="float" Nullable="false" />
+          <Property Name="ITEM" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="Table_Wax_Male">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="TYPE" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="AREA" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="COST" Type="float" Nullable="false" />
+          <Property Name="ITEM" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityContainer Name="venueModel1StoreContainer">
+          <EntitySet Name="Table_Facial" EntityType="Self.Table_Facial" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Table_Facial_Men" EntityType="Self.Table_Facial_Men" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Table_Gender" EntityType="Self.Table_Gender" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Table_Haircut_Female" EntityType="Self.Table_Haircut_Female" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Table_Haircut_Men" EntityType="Self.Table_Haircut_Men" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Table_Manicure_Female" EntityType="Self.Table_Manicure_Female" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Table_Manicure_Male" EntityType="Self.Table_Manicure_Male" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Table_Massage" EntityType="Self.Table_Massage" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Table_Pedi_Men" EntityType="Self.Table_Pedi_Men" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Table_Pedicure" EntityType="Self.Table_Pedicure" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Table_Threading" EntityType="Self.Table_Threading" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Table_Threading_Male" EntityType="Self.Table_Threading_Male" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Table_Type_Of_Service" EntityType="Self.Table_Type_Of_Service" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Table_Venue" EntityType="Self.Table_Venue" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Table_Wax" EntityType="Self.Table_Wax" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Table_Wax_Male" EntityType="Self.Table_Wax_Male" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="venueModel1" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Table_Facial">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="FACIAL_NAME" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="DESCRIPTION" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="COST" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ITEM" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Table_Facial_Men">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="FACIAL_NAME" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="DESCRIPTION" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="COST" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ITEM" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Table_Gender">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="GENDER" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Table_Haircut_Female">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="HAIR_CUT_NAME" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="COST" Type="Double" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Table_Haircut_Men">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="HAIR_CUT_NAME" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="COST" Type="Double" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Table_Manicure_Female">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="TYPES" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="COST" Type="Int32" Nullable="false" />
+          <Property Name="ITEM" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Table_Manicure_Male">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="TYPE" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="COST" Type="Double" Nullable="false" />
+          <Property Name="ITEM" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Table_Massage">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="TYPE" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="COST" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ITEM" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Table_Pedi_Men">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="TYPE" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="COST" Type="Double" Nullable="false" />
+          <Property Name="ITEM" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Table_Pedicure">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="TYPE" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="COST" Type="Double" Nullable="false" />
+          <Property Name="ITEM" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Table_Threading">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="AREA" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="COST" Type="Double" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Table_Type_Of_Service">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="TYPE_OF_SERVICE" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Table_Venue">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="LOCATION" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Table_Wax">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="WAXING_TYPE" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="WAXING_AREA" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="COST" Type="Double" Nullable="false" />
+          <Property Name="ITEM" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityContainer Name="ServicesEntities1" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Table_Facial" EntityType="Self.Table_Facial" />
+          <EntitySet Name="Table_Facial_Men" EntityType="Self.Table_Facial_Men" />
+          <EntitySet Name="Table_Gender" EntityType="Self.Table_Gender" />
+          <EntitySet Name="Table_Haircut_Female" EntityType="Self.Table_Haircut_Female" />
+          <EntitySet Name="Table_Haircut_Men" EntityType="Self.Table_Haircut_Men" />
+          <EntitySet Name="Table_Manicure_Female" EntityType="Self.Table_Manicure_Female" />
+          <EntitySet Name="Table_Manicure_Male" EntityType="Self.Table_Manicure_Male" />
+          <EntitySet Name="Table_Massage" EntityType="Self.Table_Massage" />
+          <EntitySet Name="Table_Pedi_Men" EntityType="Self.Table_Pedi_Men" />
+          <EntitySet Name="Table_Pedicure" EntityType="Self.Table_Pedicure" />
+          <EntitySet Name="Table_Threading" EntityType="Self.Table_Threading" />
+          <EntitySet Name="Table_Type_Of_Service" EntityType="Self.Table_Type_Of_Service" />
+          <EntitySet Name="Table_Venue" EntityType="Self.Table_Venue" />
+          <EntitySet Name="Table_Wax" EntityType="Self.Table_Wax" />
+          <EntitySet Name="Table_Threading_Male" EntityType="venueModel1.Table_Threading_Male" />
+          <EntitySet Name="Table_Wax_Male" EntityType="venueModel1.Table_Wax_Male" />
+        </EntityContainer>
+        <EntityType Name="Table_Threading_Male">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="AREA" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="COST" Type="Double" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Table_Wax_Male">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="TYPE" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="AREA" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="COST" Type="Double" Nullable="false" />
+          <Property Name="ITEM" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="venueModel1StoreContainer" CdmEntityContainer="ServicesEntities1">
+          <EntitySetMapping Name="Table_Facial">
+            <EntityTypeMapping TypeName="venueModel1.Table_Facial">
+              <MappingFragment StoreEntitySet="Table_Facial">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="FACIAL_NAME" ColumnName="FACIAL NAME" />
+                <ScalarProperty Name="DESCRIPTION" ColumnName="DESCRIPTION" />
+                <ScalarProperty Name="COST" ColumnName="COST" />
+                <ScalarProperty Name="ITEM" ColumnName="ITEM" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Table_Facial_Men">
+            <EntityTypeMapping TypeName="venueModel1.Table_Facial_Men">
+              <MappingFragment StoreEntitySet="Table_Facial_Men">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="FACIAL_NAME" ColumnName="FACIAL NAME" />
+                <ScalarProperty Name="DESCRIPTION" ColumnName="DESCRIPTION" />
+                <ScalarProperty Name="COST" ColumnName="COST" />
+                <ScalarProperty Name="ITEM" ColumnName="ITEM" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Table_Gender">
+            <EntityTypeMapping TypeName="venueModel1.Table_Gender">
+              <MappingFragment StoreEntitySet="Table_Gender">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="GENDER" ColumnName="GENDER" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Table_Haircut_Female">
+            <EntityTypeMapping TypeName="venueModel1.Table_Haircut_Female">
+              <MappingFragment StoreEntitySet="Table_Haircut_Female">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="HAIR_CUT_NAME" ColumnName="HAIR CUT NAME" />
+                <ScalarProperty Name="COST" ColumnName="COST" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Table_Haircut_Men">
+            <EntityTypeMapping TypeName="venueModel1.Table_Haircut_Men">
+              <MappingFragment StoreEntitySet="Table_Haircut_Men">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="HAIR_CUT_NAME" ColumnName="HAIR CUT NAME" />
+                <ScalarProperty Name="COST" ColumnName="COST" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Table_Manicure_Female">
+            <EntityTypeMapping TypeName="venueModel1.Table_Manicure_Female">
+              <MappingFragment StoreEntitySet="Table_Manicure_Female">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="TYPES" ColumnName="TYPES" />
+                <ScalarProperty Name="COST" ColumnName="COST" />
+                <ScalarProperty Name="ITEM" ColumnName="ITEM" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Table_Manicure_Male">
+            <EntityTypeMapping TypeName="venueModel1.Table_Manicure_Male">
+              <MappingFragment StoreEntitySet="Table_Manicure_Male">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="TYPE" ColumnName="TYPE" />
+                <ScalarProperty Name="COST" ColumnName="COST" />
+                <ScalarProperty Name="ITEM" ColumnName="ITEM" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Table_Massage">
+            <EntityTypeMapping TypeName="venueModel1.Table_Massage">
+              <MappingFragment StoreEntitySet="Table_Massage">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="TYPE" ColumnName="TYPE" />
+                <ScalarProperty Name="COST" ColumnName="COST" />
+                <ScalarProperty Name="ITEM" ColumnName="ITEM" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Table_Pedi_Men">
+            <EntityTypeMapping TypeName="venueModel1.Table_Pedi_Men">
+              <MappingFragment StoreEntitySet="Table_Pedi_Men">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="TYPE" ColumnName="TYPE" />
+                <ScalarProperty Name="COST" ColumnName="COST" />
+                <ScalarProperty Name="ITEM" ColumnName="ITEM" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Table_Pedicure">
+            <EntityTypeMapping TypeName="venueModel1.Table_Pedicure">
+              <MappingFragment StoreEntitySet="Table_Pedicure">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="TYPE" ColumnName="TYPE" />
+                <ScalarProperty Name="COST" ColumnName="COST" />
+                <ScalarProperty Name="ITEM" ColumnName="ITEM" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Table_Threading">
+            <EntityTypeMapping TypeName="venueModel1.Table_Threading">
+              <MappingFragment StoreEntitySet="Table_Threading">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="AREA" ColumnName="AREA" />
+                <ScalarProperty Name="COST" ColumnName="COST" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Table_Type_Of_Service">
+            <EntityTypeMapping TypeName="venueModel1.Table_Type_Of_Service">
+              <MappingFragment StoreEntitySet="Table_Type_Of_Service">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="TYPE_OF_SERVICE" ColumnName="TYPE OF SERVICE" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Table_Venue">
+            <EntityTypeMapping TypeName="venueModel1.Table_Venue">
+              <MappingFragment StoreEntitySet="Table_Venue">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="LOCATION" ColumnName="LOCATION" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Table_Wax">
+            <EntityTypeMapping TypeName="venueModel1.Table_Wax">
+              <MappingFragment StoreEntitySet="Table_Wax">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="WAXING_TYPE" ColumnName="WAXING TYPE" />
+                <ScalarProperty Name="WAXING_AREA" ColumnName="WAXING AREA" />
+                <ScalarProperty Name="COST" ColumnName="COST" />
+                <ScalarProperty Name="ITEM" ColumnName="ITEM" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Table_Threading_Male">
+            <EntityTypeMapping TypeName="venueModel1.Table_Threading_Male">
+              <MappingFragment StoreEntitySet="Table_Threading_Male">
+                <ScalarProperty Name="COST" ColumnName="COST" />
+                <ScalarProperty Name="AREA" ColumnName="AREA" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Table_Wax_Male">
+            <EntityTypeMapping TypeName="venueModel1.Table_Wax_Male">
+              <MappingFragment StoreEntitySet="Table_Wax_Male">
+                <ScalarProperty Name="ITEM" ColumnName="ITEM" />
+                <ScalarProperty Name="COST" ColumnName="COST" />
+                <ScalarProperty Name="AREA" ColumnName="AREA" />
+                <ScalarProperty Name="TYPE" ColumnName="TYPE" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

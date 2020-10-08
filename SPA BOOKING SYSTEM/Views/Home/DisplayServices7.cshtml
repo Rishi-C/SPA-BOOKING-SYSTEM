@@ -1,0 +1,61 @@
+﻿@model List<SPA_BOOKING_SYSTEM.Models.Table_Haircut_Female>
+
+@{
+    ViewBag.Title = "DisplayServices";
+}
+
+<div style="font-family:Algerian">
+    <h2>Displaying the types of Hair cut (Female)</h2>
+
+
+    <h4>Choose your own style</h4>
+</div>
+<div>
+    <hr />
+    <table>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td><h2 style="font-size:120%;"> <b>@item.HAIR_CUT_NAME</b></h2></td>
+                <td> @Html.ActionLink("Add to Cart", "CartList", new { name = item.HAIR_CUT_NAME }) </td>
+            </tr>
+            <tr>
+                <td><b>&nbsp;Rs </b> @item.COST/-</td>
+            </tr>
+        }
+
+        <tr>
+            <td><h2 style="font-size:120%;"> <b>General Procedure: </b></h2><h2 style="font-size:130%;"> Hair wash and hair blow will be done before and after the hair cut. </h2></td>
+        </tr>
+
+    </table>
+
+</div>
+
+<br />
+<br />
+<div style="font-family:'Times New Roman'">
+    <style>
+        .btn {
+            padding: 10px 25px;
+            color: black;
+            text-align: center;
+            cursor: pointer;
+            font-size: 20px;
+            margin: 9px 5px;
+        }
+
+        .button1 {
+            background-color: papayawhip;
+            color: black;
+            border: 4px solid #000000;
+        }
+    </style>
+
+    <button class="btn button1">
+        <b>
+            @Html.ActionLink("Proceed for Appointment", "Slot")
+        </b>
+    </button>
+
+</div>

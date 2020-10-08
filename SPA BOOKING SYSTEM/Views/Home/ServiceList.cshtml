@@ -1,0 +1,40 @@
+﻿
+@{
+    ViewBag.Title = "ServiceList";
+}
+
+    <div style="font-family:Algerian">
+
+        <h2>WELCOME</h2>
+
+        <h2>Choose your Service</h2>
+
+    </div>
+<br/>
+<br />
+@using (Html.BeginForm("DisplayServices", "Home", FormMethod.Get))
+{
+    <b>Search by</b>
+
+    <br />
+    <br />
+    @Html.RadioButton("Gender", "Male", true)<text> Male </text>
+    <br/>
+    @Html.RadioButton("Gender", "Female")<text> Female </text>
+    <br />
+    <br />
+
+
+    @Html.DropDownList("Service", new SelectListItem[] {
+                                  new SelectListItem() {Text = "Facial", Value = "Facial" },
+                                  new SelectListItem() {Text = "Hair Cut", Value = "Hair Cut" },
+                                  new SelectListItem() {Text = "Waxing", Value = "Waxing" },
+                                  new SelectListItem() {Text = "Threading", Value = "Threading" },
+                                  new SelectListItem() {Text = "Massaging", Value = "Massaging" },
+                                  new SelectListItem() {Text = "Manicure", Value = "Manicure" },
+                                  new SelectListItem() {Text = "Pedicure", Value = "Pedicure" }
+})
+    <input type="submit" value="Search" />
+}
+
+
